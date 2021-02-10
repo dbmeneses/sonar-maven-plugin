@@ -99,7 +99,7 @@ public class SonarQubeMojo extends AbstractMojo {
     PropertyDecryptor propertyDecryptor = new PropertyDecryptor(getLog(), securityDispatcher);
 
     ScannerFactory runnerFactory = new ScannerFactory(logHandler, getLog(), runtimeInformation, mojoExecution, session, envProps, propertyDecryptor);
-
+    System.out.println("tst");
     if (isSkip(runnerFactory.createGlobalProperties())) {
       return;
     }
