@@ -18,7 +18,7 @@ jobs:
         args: >
           -Dsonar.organization=dbmeneses
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@566b06d0b68ae7553b65c44fe0bfa7d740b715e3
+      uses: sonarsource/sonarcloud-github-action@1e58508de7f4f3a6648e83cc27f12adf47c9e481
       with:
         args: >
           -Dsonar.organization=dbmeneses
