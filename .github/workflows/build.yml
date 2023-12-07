@@ -19,7 +19,8 @@ jobs:
           -Dsonar.organization=dbmeneses
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
-      args: >
+      with:
+        args: >
           -Dsonar.organization=dbmeneses
           -Dsonar.projectKey=test
       env:
