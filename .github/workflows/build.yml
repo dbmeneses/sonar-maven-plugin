@@ -11,11 +11,6 @@ jobs:
   sonarcloud:
     runs-on: self-hosted
     steps:
-    - name: Clean the workspace
-      uses: docker://alpine
-      with:
-        #args: /bin/sh -c "rm -rf \"${GITHUB_WORKSPACE}\"/.* || rm -rf \"${GITHUB_WORKSPACE}\"*"  
-       args: /bin/sh -c "find \"${GITHUB_WORKSPACE}\" -mindepth 1 ! -name . -prune -exec rm -rf {} +"
     - uses: actions/checkout@v3
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
@@ -23,7 +18,7 @@ jobs:
         args: >
           -Dsonar.organization=dbmeneses
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@v2.0.2
+      uses: sonarsource/sonarcloud-github-action@d029d6c19033cf4452ad0f9055d014998cd9ce25
       with:
         args: >
           -Dsonar.organization=dbmeneses
