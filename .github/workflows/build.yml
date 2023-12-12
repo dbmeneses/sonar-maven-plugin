@@ -14,7 +14,7 @@ jobs:
     - name: Clean the workspace
       uses: docker://alpine
       with:
-        args: /bin/bash -c "rm -rf \"${GITHUB_WORKSPACE}\"/{..?*,.[!.]*,*}"  
+        args: /bin/bash -c "rm -rf \"${GITHUB_WORKSPACE}\"/..?* \"${GITHUB_WORKSPACE}\".[!.]* \"${GITHUB_WORKSPACE}\"*"  
     - uses: actions/checkout@v3
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
